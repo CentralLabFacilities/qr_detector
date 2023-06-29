@@ -54,7 +54,7 @@ void QrDetectorNodelet::imageCallback(const sensor_msgs::ImageConstPtr& image)
 
   try
   {
-    cv_image = cv_bridge::toCvShare(image, sensor_msgs::image_encodings::BGR8);
+    cv_image = cv_bridge::toCvShare(image, sensor_msgs::image_encodings::16UC1);
   }
   catch (cv_bridge::Exception& e)
   {
